@@ -1,0 +1,106 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+\pagenumbering{gobble} % suppress displaying page number
+
+\name{高健人}
+
+\basicInfo{
+  \email{gaopeng527@163.com} \textperiodcentered\
+  \phone{(+86)17338126815} \textperiodcentered\
+  \github{https://github.com/gaopeng527}}
+ 
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{大连理工大学}, 辽宁}{2014.09 -- 2017.06}
+\textit{硕士研究生}\ 计算机应用技术（排名：前30\%）
+\datedsubsection{\textbf{河南科技大学}, 河南}{2010.09 -- 2014.06}
+\textit{学士}\ 数学与应用数学（排名：前5\%）
+
+\section{\faCogs\ 专业技能}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 熟悉Flink大数据流式计算框架的使用及参数调优，有相关项目开发经验
+  \item 熟悉HBase海量数据存储行键设计及查询优化策略
+  \item 熟悉Spark和Hadoop大数据开源框架的使用
+  \item 熟悉kafka消息队列，熟悉Zookeeper
+  \item 熟悉dubbo分布式服务框架的搭建及使用
+  \item 熟悉应用服务器软件Tomcat、Nginx等容器配置和部署，熟悉Linux开发环境
+  \item 熟悉Java编程，熟悉常用的数据结构、算法与面向对象编程
+  \item 熟悉SpringMVC，SpringBoot，Spring，MyBatis等Java常用Web开源框架
+\end{itemize}
+
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{ODP流式计算}}{2017.07 -- 至今}
+\role{\textbf{公\hspace{2em}司：}}{北京嘀嘀无限科技发展有限公司}
+\role{\textbf{开发环境：}}{IDEA + Linux + HBase + Flink + Git}
+\role{\textbf{责任描述：}}{项目主要负责人}
+\textbf{项目简介：}
+\begin{itemize}
+  \item 对公司规范化的键值对日志进行解析以及字段提取、路径转换、过滤等操作，去除无用字段的同时根据用户需求存储到指定路径，并将整个处理流程配置化
+  \item 将处理后的日志分类存入HBase，并提供sdk和http两种查询方式，供用户使用，并提供配置化的存储查询方式
+  \item 根据业务需求将日志根据id进行join操作，合并关联数据，实时的将数据发送给下游使用方，用户可根据提供的查询方式实时或离线获取所需日志信息
+  \item 支持数据分流操作，针对同一种日志不同需求方可以获取不同的字段及存储路径，支持以配置的方式将数据实时写入kafka中供用户使用
+  \item 提供id映射服务，实时的将用户手机号与系统版本、用户id等字段关联起来提供相关id的相互查询服务
+\end{itemize}
+\textbf{主要成果：}
+\begin{itemize}
+  \item 日志处理峰值可达27W+/s，各类数据存储量达50T，数据处理延迟保证在毫秒级以内
+  \item 支撑多个团队所需日志数据，包括实时查询进行字段监控和离线查询进行问题定位
+  \item ID映射服务被多个团队稳定使用，日均查询量在20W以上
+  \item 以平台的形式提供相关日志查询及日志配置变更
+\end{itemize}
+
+\rule{\textwidth}{0.1mm}
+\datedsubsection{\textbf{基于Spark技术的LTE网络信令数据实时分析系统研究}}{2014.09 -- 2016.06}
+\role{\textbf{开发环境：}}{Eclipse + Ubuntu + MogoDB + Spark + Hadoop}
+\role{\textbf{责任描述：}}{架构设计、平台实现、数据存储}
+\begin{onehalfspacing}
+\textbf{项目简介：}
+\begin{itemize}
+  \item 通过对LTE网络及协议的深入研究，提取信令数据特征
+  \item 根据LTE信令数据海量和实时性特点，设计实现满足可扩展性以及实时性要求的Spark平台，实现数据的实时高效存储分析
+  \item 利用LTE信令数据和Spark系统实现基于基站的用户实时定位，从而实现基于位置信息的网络优化
+\end{itemize}
+\textbf{主要成果：}
+\begin{itemize}
+  \item 针对基站定位系统已经基本实现上述功能，信令数据存入kafka消息队列由Spark Streaming消费，调用相关算法分别对每个用户的信息进行处理，将定位结果实时反馈，并存入HBase当中供后续查询处理
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faHeartO\ 获奖情况}
+\datedline{\textit{国家励志奖学金}, 河南科技大学}{2012.05}
+\datedline{\textit{大学生数学建模竞赛省一等奖}, 河南科技大学}{2012.09}
+\datedline{\textit{国家励志奖学金}, 河南科技大学}{2013.05}
+\datedline{\textit{河南省三好学生}, 河南科技大学}{2013.10}
+\datedline{\textit{二等奖学金}, 大连理工大学}{2014.09}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 技术博客: http://www.cnblogs.com/gaopeng527
+  \item 语\hspace{2em}言: 英语 - CET4
+  \item 通讯地址:北京市昌平区华龙苑南里小区18号楼三单元201
+\end{itemize}
+
+\section{\faTags\ 自我评价}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 工作认真负责，性格开朗，乐观向上
+  \item 热爱软件事业，关注行业动态，对于IT领域的软件开发和工作有着浓厚的兴趣
+  \item 吃苦耐劳、敢于面对和克服困难，能承受较大的工作压力
+  \item 有良好的团队协调能力和环境适应能力，有责任感与使命感
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
